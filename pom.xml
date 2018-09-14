@@ -53,7 +53,7 @@
         <maven.compile.encoding>UTF-8</maven.compile.encoding>
         <javax.jsp.api.version>2.2</javax.jsp.api.version>
         <javax.cdi.api.version>1.2</javax.cdi.api.version>
-        <javax.mail.version>1.6.1</javax.mail.version>
+        <javax.mail.version>1.4.7</javax.mail.version>
         <javax.jstl.version>1.2</javax.jstl.version>
         <javax.servlet_api_version>3.0.1</javax.servlet_api_version>
         <javax.persistence.version>1.0</javax.persistence.version>
