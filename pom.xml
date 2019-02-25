@@ -39,6 +39,7 @@
 
         <sparrow_log_version>1.0-SNAPSHOT</sparrow_log_version>
         <sparrow_rocketmq_client_version>1.0-SNAPSHOT</sparrow_rocketmq_client_version>
+        <sparrow_kafka_client_version>1.0-SNAPSHOT</sparrow_kafka_client_version>
         <sparrow_redis_client_version>1.0-SNAPSHOT</sparrow_redis_client_version>
         <sparrow_aop_version>1.0-SNAPSHOT</sparrow_aop_version>
         <sparrow_distribution_job_version>1.0-SNAPSHOT</sparrow_distribution_job_version>
