@@ -46,6 +46,9 @@
         <sparrow_distribution_config_version>1.0-SNAPSHOT</sparrow_distribution_config_version>
         <sparrow_markdown_version>1.0-SNAPSHOT</sparrow_markdown_version>
         <sparrow_registry_version>1.0-SNAPSHOT</sparrow_registry_version>
+        <sparrow_protocol_version>1.0-SNAPSHOT</sparrow_protocol_version>
+
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Build Environment -->
         <maven.compile.source>1.8</maven.compile.source>
@@ -228,6 +231,12 @@
                 <groupId>com.sparrow</groupId>
                 <artifactId>sparrow-sharded-jedis</artifactId>
                 <version>${sparrow_sharded_jedis_version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-protocol</artifactId>
+                <version>${sparrow_protocol_version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
