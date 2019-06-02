@@ -246,17 +246,11 @@
                 <groupId>org.elasticsearch</groupId>
                 <artifactId>elasticsearch-analysis-ik</artifactId>
                 <version>6.1.1</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.lucene</groupId>
-                        <artifactId>lucene-core</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.apache.lucene</groupId>
                 <artifactId>lucene-core</artifactId>
-                <!--same to elastic search's lucence version-->
+                <!--same to elastic search's lucene version-->
                 <version>7.1.0</version>
             </dependency>
         </dependencies>
