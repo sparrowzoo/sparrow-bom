@@ -80,7 +80,6 @@
     </distributionManagement>
 
 
-
     <scm>
         <url>https://github.com/sparrowzoo/sparrow.git</url>
         <connection>scm:git:https://github.com/sparrowzoo/sparrow.git</connection>
@@ -127,11 +126,6 @@
                 <groupId>commons-pool</groupId>
                 <artifactId>commons-pool</artifactId>
                 <version>1.5.5</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-core</artifactId>
-                <version>3.6.1</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
@@ -203,10 +197,10 @@
                 <version>${sparrow_json_version}</version>
             </dependency>
             <dependency>
-            <groupId>com.sparrow</groupId>
-            <artifactId>sparrow-loader</artifactId>
-            <version>${sparrow_loader_version}</version>
-        </dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-loader</artifactId>
+                <version>${sparrow_loader_version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.sparrow</groupId>
                 <artifactId>sparrow-log</artifactId>
@@ -247,6 +241,23 @@
                 <groupId>com.sparrow</groupId>
                 <artifactId>sparrow-protocol</artifactId>
                 <version>${sparrow_protocol_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch-analysis-ik</artifactId>
+                <version>6.1.1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.lucene</groupId>
+                        <artifactId>lucene-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-core</artifactId>
+                <!--same to elastic search's lucence version-->
+                <version>7.1.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -437,17 +448,17 @@
                 </configuration>
             </plugin>
             <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-javadoc-plugin</artifactId>-->
-                <!--<version>2.9.1</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>attach-javadocs</id>-->
-                        <!--<goals>-->
-                            <!--<goal>jar</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-javadoc-plugin</artifactId>-->
+            <!--<version>2.9.1</version>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>attach-javadocs</id>-->
+            <!--<goals>-->
+            <!--<goal>jar</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
             <!--</plugin>-->
         </plugins>
     </build>
