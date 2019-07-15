@@ -65,6 +65,7 @@
         <mysql.version>5.1.46</mysql.version>
         <tomcat.version>7.0.73</tomcat.version>
         <tomcat.plugin.version>2.2</tomcat.plugin.version>
+        <jna.version>5.3.1</jna.version>
     </properties>
 
 
@@ -253,6 +254,12 @@
                 <!--same to elastic search's lucene version-->
                 <version>7.1.0</version>
             </dependency>
+            <dependency>
+                <groupId>net.java.dev.jna</groupId>
+                <artifactId>jna</artifactId>
+                <version>${jna.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <profiles>
