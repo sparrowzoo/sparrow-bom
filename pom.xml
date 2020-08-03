@@ -291,9 +291,9 @@
     </dependencyManagement>
     <profiles>
         <profile>
-            <id>develop</id>
+            <id>dev</id>
             <properties>
-                <env>develop</env>
+                <env>dev</env>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -306,9 +306,9 @@
             </properties>
         </profile>
         <profile>
-            <id>production</id>
+            <id>prod</id>
             <properties>
-                <env>production</env>
+                <env>prod</env>
             </properties>
         </profile>
     </profiles>
