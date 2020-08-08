@@ -68,6 +68,7 @@
         <jna.version>5.3.1</jna.version>
         <yaml.version>1.19</yaml.version>
         <lettuce.version>5.0.5.RELEASE</lettuce.version>
+        <logback.version>1.2.4.RELEASE</logback.version>
     </properties>
 
 
@@ -286,6 +287,11 @@
                 <groupId>com.esotericsoftware.kryo</groupId>
                 <artifactId>kryo</artifactId>
                 <version>2.24.0</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
