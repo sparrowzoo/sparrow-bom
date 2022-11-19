@@ -68,7 +68,6 @@
         <tomcat.plugin.version>2.2</tomcat.plugin.version>
         <jna.version>5.3.1</jna.version>
         <yaml.version>1.26</yaml.version>
-        <lettuce.version>5.0.5.RELEASE</lettuce.version>
         <logback.version>1.2.9</logback.version>
     </properties>
 
@@ -83,7 +82,6 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
 
     <scm>
         <url>https://github.com/sparrowzoo/sparrow-shell.git</url>
@@ -267,11 +265,6 @@
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>${yaml.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lettuce</groupId>
-                <artifactId>lettuce-core</artifactId>
-                <version>${lettuce.version}</version>
             </dependency>
 
             <dependency>
