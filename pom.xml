@@ -23,7 +23,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sparrowzoo</groupId>
-    <version>1.0.1-RELEASE</version>
+    <version>1.0.3-RELEASE</version>
     <packaging>pom</packaging>
     <!-- (bill of materials)-->
     <artifactId>sparrow-bom</artifactId>
@@ -32,7 +32,7 @@
     <url>https://github.com/sparrowzoo/sparrow-bom.git</url>
     <description>sparrow-bom</description>
     <properties>
-        <sparrow_version>1.0.1-RELEASE</sparrow_version>
+        <sparrow_version>1.0.3-RELEASE</sparrow_version>
         <sparrow_loader_version>1.0.0-RELEASE</sparrow_loader_version>
         <sparrow_json_version>1.0.0-RELEASE</sparrow_json_version>
         <sparrow_orm_version>1.0.0-RELEASE</sparrow_orm_version>
@@ -49,7 +49,7 @@
         <sparrow_distribution_config_version>1.0.0-RELEASE</sparrow_distribution_config_version>
         <sparrow_markdown_version>1.0.0-RELEASE</sparrow_markdown_version>
         <sparrow_registry_version>1.0.0-RELEASE</sparrow_registry_version>
-        <sparrow_protocol_version>1.0.0-RELEASE</sparrow_protocol_version>
+        <sparrow_protocol_version>1.0.1-RELEASE</sparrow_protocol_version>
         <sparrow_protocol_dao_version>1.0.0-RELEASE</sparrow_protocol_dao_version>
         <sparrow_protocol_mq_version>1.0.0-RELEASE</sparrow_protocol_mq_version>
         <sparrow_protocol_redis_version>1.0.0-RELEASE</sparrow_protocol_redis_version>
