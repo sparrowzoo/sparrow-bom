@@ -73,6 +73,10 @@
         <jna.version>5.3.1</jna.version>
         <yaml.version>1.26</yaml.version>
         <logback.version>1.2.9</logback.version>
+        <sparrow_starer_verion>1.0.0-SNAPSHOT</sparrow_starer_verion>
+        <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
+        <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
     </properties>
     <developers>
         <developer>
@@ -304,6 +308,36 @@
                 <artifactId>thymeleaf</artifactId>
                 <version>3.0.11.RELEASE</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- 声明 springCloud Alibaba 版本 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.sparrowzoo</groupId>
+                <artifactId>sparrow-starter</artifactId>
+                <version>${sparrow_starer_verion}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <profiles>
@@ -442,7 +476,6 @@
 
                 <!--https://stackoverflow.com/questions/9260555/tomcat-7-in-eclipse-indigo-javax-naming-namenotfoundexception-resource-web-in/9261392#9261392-->
                 <!--https://relentlesscoding.com/2018/04/24/tomcat7-maven-plugin-invalid-byte-tag-in-constant-pool-19/-->
-
                 <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
                     <artifactId>tomcat7-maven-plugin</artifactId>
@@ -563,7 +596,6 @@
                         </rules>
                     </configuration>
                 </plugin>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
@@ -571,6 +603,18 @@
                     <configuration>
                         <encoding>UTF-8</encoding>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
