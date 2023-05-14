@@ -33,28 +33,6 @@
     <description>sparrow-bom</description>
     <properties>
         <sparrow_version>1.0.3-RELEASE</sparrow_version>
-        <sparrow_loader_version>1.0.3-RELEASE</sparrow_loader_version>
-        <sparrow_json_version>1.0.3-RELEASE</sparrow_json_version>
-        <sparrow_orm_version>1.0.3-RELEASE</sparrow_orm_version>
-        <sparrow_mvc_version>1.0.3-RELEASE</sparrow_mvc_version>
-        <sparrow_data_source_version>1.0.3-RELEASE</sparrow_data_source_version>
-        <sparrow_container_version>1.0.3-RELEASE</sparrow_container_version>
-        <sparrow_jedis_version>1.0.3-RELEASE</sparrow_jedis_version>
-        <sparrow_log_version>1.0.3-RELEASE</sparrow_log_version>
-        <sparrow_rocketmq_client_version>1.0.3-RELEASE</sparrow_rocketmq_client_version>
-        <sparrow_kafka_client_version>1.0.3-RELEASE</sparrow_kafka_client_version>
-        <sparrow_redis_client_version>1.0.3-RELEASE</sparrow_redis_client_version>
-        <sparrow_aop_version>1.0.3-RELEASE</sparrow_aop_version>
-        <sparrow_distribution_job_version>1.0.0-RELEASE</sparrow_distribution_job_version>
-        <sparrow_distribution_config_version>1.0.0-RELEASE</sparrow_distribution_config_version>
-        <sparrow_markdown_version>1.0.3-RELEASE</sparrow_markdown_version>
-        <sparrow_registry_version>1.0.3-RELEASE</sparrow_registry_version>
-        <sparrow_protocol_version>1.0.3-RELEASE</sparrow_protocol_version>
-        <sparrow_protocol_dao_version>1.0.3-RELEASE</sparrow_protocol_dao_version>
-        <sparrow_protocol_mq_version>1.0.3-RELEASE</sparrow_protocol_mq_version>
-        <sparrow_protocol_redis_version>1.0.3-RELEASE</sparrow_protocol_redis_version>
-
-        <sparrow_lettuce_cluster_version>1.0.3-RELEASE-RELEASE</sparrow_lettuce_cluster_version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Build Environment -->
         <maven.compile.source>1.8</maven.compile.source>
@@ -73,7 +51,6 @@
         <jna.version>5.3.1</jna.version>
         <yaml.version>1.26</yaml.version>
         <logback.version>1.2.9</logback.version>
-        <sparrow_starer_verion>1.0.0-SNAPSHOT</sparrow_starer_verion>
         <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
@@ -181,85 +158,85 @@
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-container</artifactId>
-                <version>${sparrow_container_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-data-source</artifactId>
-                <version>${sparrow_data_source_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-json</artifactId>
-                <version>${sparrow_json_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-loader</artifactId>
-                <version>${sparrow_loader_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-log</artifactId>
-                <version>${sparrow_log_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-orm</artifactId>
-                <version>${sparrow_orm_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-mvc</artifactId>
-                <version>${sparrow_mvc_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-registry</artifactId>
-                <version>${sparrow_registry_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-markdown</artifactId>
-                <version>${sparrow_markdown_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-rocketmq-client</artifactId>
-                <version>${sparrow_rocketmq_client_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-jedis</artifactId>
-                <version>${sparrow_jedis_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-jedis-cluster</artifactId>
-                <version>${sparrow_jedis_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-protocol</artifactId>
-                <version>${sparrow_protocol_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-protocol-dao</artifactId>
-                <version>${sparrow_protocol_dao_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-protocol-mq</artifactId>
-                <version>${sparrow_protocol_mq_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-protocol-redis</artifactId>
-                <version>${sparrow_protocol_redis_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>org.elasticsearch</groupId>
@@ -286,7 +263,7 @@
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-lettuce-cluster</artifactId>
-                <version>${sparrow_lettuce_cluster_version}</version>
+                <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.esotericsoftware.kryo</groupId>
@@ -336,7 +313,7 @@
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-starter</artifactId>
-                <version>${sparrow_starer_verion}</version>
+                <version>${sparrow_verion}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
