@@ -23,7 +23,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sparrowzoo</groupId>
-    <version>1.0.4-RELEASE</version>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
     <!-- (bill of materials)-->
     <artifactId>sparrow-bom</artifactId>
@@ -32,7 +32,7 @@
     <url>https://github.com/sparrowzoo/sparrow-bom.git</url>
     <description>sparrow-bom</description>
     <properties>
-        <sparrow_version>1.0.4-RELEASE</sparrow_version>
+        <sparrow_version>1.0.5-SNAPSHOT</sparrow_version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Build Environment -->
         <maven.compile.source>1.8</maven.compile.source>
