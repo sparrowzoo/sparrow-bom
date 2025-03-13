@@ -54,7 +54,7 @@
         <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
-        <lambok.version>1.18.36</lambok.version>
+        <lombok.version>1.18.36</lombok.version>
     </properties>
     <developers>
         <developer>
@@ -98,6 +98,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
