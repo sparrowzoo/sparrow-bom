@@ -39,22 +39,26 @@
         <maven.compile.target>1.8</maven.compile.target>
         <maven.compile.version>3.1</maven.compile.version>
         <maven.compile.encoding>UTF-8</maven.compile.encoding>
-        <javax.jsp.api.version>2.2</javax.jsp.api.version>
         <javax.cdi.api.version>1.2</javax.cdi.api.version>
         <javax.mail.version>1.4.7</javax.mail.version>
-        <javax.jstl.version>1.2</javax.jstl.version>
         <javax.servlet_api_version>3.0.1</javax.servlet_api_version>
         <javax.persistence.version>1.0</javax.persistence.version>
-        <mysql.version>8.0.29</mysql.version>
-        <tomcat.version>7.0.73</tomcat.version>
-        <tomcat.plugin.version>2.2</tomcat.plugin.version>
+        <javax.validation.version>2.0.1.Final</javax.validation.version>
         <jna.version>5.3.1</jna.version>
+        <netty.version>4.1.36.Final</netty.version>
         <yaml.version>1.26</yaml.version>
+        <lombok.version>1.18.36</lombok.version>
         <logback.version>1.2.9</logback.version>
+        <mysql.version>8.0.29</mysql.version>
+        <spring.druid.version>1.2.8</spring.druid.version>
+        <spring.mybatis.version>2.1.4</spring.mybatis.version>
+        <spring.knife4j.version>2.0.9</spring.knife4j.version>
         <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
-        <lombok.version>1.18.36</lombok.version>
+        <apache.commons.version>3.10</apache.commons.version>
+        <tomcat.version>7.0.73</tomcat.version>
+        <tomcat.plugin.version>2.2</tomcat.plugin.version>
     </properties>
     <developers>
         <developer>
@@ -99,6 +103,16 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${spring.knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
@@ -107,6 +121,11 @@
                 <groupId>javax.mail</groupId>
                 <artifactId>mail</artifactId>
                 <version>${javax.mail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons.version}</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>
@@ -135,16 +154,86 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>javax.servlet.jsp</groupId>
-                <artifactId>jsp-api</artifactId>
-                <version>${javax.jsp.api.version}</version>
-                <scope>provided</scope>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${javax.validation.version}</version>
             </dependency>
             <dependency>
-                <groupId>jstl</groupId>
-                <artifactId>jstl</artifactId>
-                <version>${javax.jstl.version}</version>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch-analysis-ik</artifactId>
+                <version>6.1.1</version>
             </dependency>
+
+            <dependency>
+                <groupId>net.java.dev.jna</groupId>
+                <artifactId>jna</artifactId>
+                <version>${jna.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${yaml.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>2.4.3</version>
+            </dependency>
+            <dependency>
+                <groupId>com.esotericsoftware.kryo</groupId>
+                <artifactId>kryo</artifactId>
+                <version>2.24.0</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${spring.mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${spring.druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>2.3.2.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- 声明 springCloud Alibaba 版本 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow</artifactId>
@@ -192,27 +281,12 @@
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
-                <artifactId>sparrow-registry</artifactId>
-                <version>${sparrow_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-markdown</artifactId>
                 <version>${sparrow_version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-rocketmq-client</artifactId>
-                <version>${sparrow_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sparrowzoo</groupId>
-                <artifactId>sparrow-jedis</artifactId>
-                <version>${sparrow_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sparrowzoo</groupId>
-                <artifactId>sparrow-jedis-cluster</artifactId>
                 <version>${sparrow_version}</version>
             </dependency>
 
@@ -232,83 +306,6 @@
                 <artifactId>sparrow-protocol-mq</artifactId>
                 <version>${sparrow_version}</version>
             </dependency>
-
-            <dependency>
-                <groupId>com.sparrowzoo</groupId>
-                <artifactId>sparrow-protocol-redis</artifactId>
-                <version>${sparrow_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.elasticsearch</groupId>
-                <artifactId>elasticsearch-analysis-ik</artifactId>
-                <version>6.1.1</version>
-            </dependency>
-
-            <dependency>
-                <groupId>net.java.dev.jna</groupId>
-                <artifactId>jna</artifactId>
-                <version>${jna.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.yaml</groupId>
-                <artifactId>snakeyaml</artifactId>
-                <version>${yaml.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-pool2</artifactId>
-                <version>2.4.3</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sparrowzoo</groupId>
-                <artifactId>sparrow-lettuce-cluster</artifactId>
-                <version>${sparrow_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.esotericsoftware.kryo</groupId>
-                <artifactId>kryo</artifactId>
-                <version>2.24.0</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>javax.inject</groupId>
-                <artifactId>javax.inject</artifactId>
-                <version>1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.thymeleaf</groupId>
-                <artifactId>thymeleaf</artifactId>
-                <version>3.0.11.RELEASE</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- 声明 springCloud Alibaba 版本 -->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
 
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
