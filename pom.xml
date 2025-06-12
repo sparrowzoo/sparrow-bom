@@ -45,6 +45,7 @@
         <javax.persistence.version>1.0</javax.persistence.version>
         <javax.validation.version>2.0.1.Final</javax.validation.version>
         <jna.version>5.3.1</jna.version>
+        <jwt.version>0.9.1</jwt.version>
         <netty.version>4.1.36.Final</netty.version>
         <yaml.version>1.26</yaml.version>
         <lombok.version>1.18.36</lombok.version>
@@ -102,6 +103,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
