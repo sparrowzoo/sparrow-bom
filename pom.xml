@@ -281,11 +281,8 @@
                 <artifactId>sparrow-log</artifactId>
                 <version>${sparrow_version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.sparrowzoo</groupId>
-                <artifactId>authenticator-api</artifactId>
-                <version>${sparrow_version}</version>
-            </dependency>
+
+
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-orm</artifactId>
@@ -327,6 +324,33 @@
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-starter</artifactId>
+                <version>${sparrow_version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.sparrowzoo</groupId>
+                <artifactId>authenticator-core</artifactId>
+                <version>${sparrow_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sparrowzoo</groupId>
+                <artifactId>authenticator-passport-starter</artifactId>
+                <version>${sparrow_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sparrowzoo</groupId>
+                <artifactId>authenticator-monolithic-starter</artifactId>
+                <version>${sparrow_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sparrowzoo</groupId>
+                <artifactId>authenticator-microservice-starter</artifactId>
+                <version>${sparrow_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sparrowzoo</groupId>
+                <artifactId>authenticator-gateway-api</artifactId>
                 <version>${sparrow_version}</version>
             </dependency>
         </dependencies>
