@@ -295,6 +295,11 @@
             </dependency>
             <dependency>
                 <groupId>com.sparrowzoo</groupId>
+                <artifactId>sparrow-mvc-thymeleaf</artifactId>
+                <version>${sparrow_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sparrowzoo</groupId>
                 <artifactId>sparrow-markdown</artifactId>
                 <version>${sparrow_version}</version>
             </dependency>
